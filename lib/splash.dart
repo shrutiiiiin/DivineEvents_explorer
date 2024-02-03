@@ -1,5 +1,5 @@
 
-import 'event_page.dart';
+import 'Events/screens/event_page.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 

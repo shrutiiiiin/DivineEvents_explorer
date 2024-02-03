@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project1/event_page.dart';
+import 'package:project1/Events/screens/event_page.dart';
 import 'package:project1/splash.dart';
 
 

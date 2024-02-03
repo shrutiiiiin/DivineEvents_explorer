@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:concentric_transition/concentric_transition.dart';
+
+import 'package:project1/Events/widgets/customTimeline.dart';
+
+import '../widgets/custom_icon.dart';
 
 
 class Events extends StatefulWidget {
@@ -31,28 +34,8 @@ class _EventsState extends State<Events> {
 
         ],
       ),
-      body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(),
-          )
-        ),
-      ),
+      body: CustomTimeline(),
 
     );
-  }
-}
-
-class CustomIcon extends StatelessWidget {
-   CustomIcon({
-    super.key,
-    required this.icon,
-  });
-  final IconData icon;
-
-  @override
-  Widget build(BuildContext context) {
-    return IconButton(onPressed: (){
-    },icon: Icon(icon , size: 24,));
   }
 }
