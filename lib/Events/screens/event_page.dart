@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'package:project1/Events/widgets/customTimeline.dart';
 
@@ -17,7 +18,9 @@ class _EventsState extends State<Events> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Divine Events'),
+        title: Text('Divine Events', style: GoogleFonts.junge(
+          fontSize: 24
+        ),),
         leading: Row(
           children: [
             IconButton(

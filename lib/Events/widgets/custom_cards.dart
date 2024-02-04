@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:swipe_cards/swipe_cards.dart';
 
 class customCards extends StatelessWidget {
   const customCards({
@@ -11,9 +10,10 @@ class customCards extends StatelessWidget {
   final String content;
 
   @override
+
   Widget build(BuildContext context) {
     return Container(
-      
+
     );
   }
 }
