@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:concentric_transition/concentric_transition.dart';
 
 class CustomIcon extends StatelessWidget {
   CustomIcon({

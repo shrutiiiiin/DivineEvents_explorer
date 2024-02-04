@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:concentric_transition/concentric_transition.dart';
+
+import 'custom_cards.dart';
 class CustomTimeline extends StatefulWidget {
   const CustomTimeline({super.key});
 
@@ -10,6 +11,19 @@ class CustomTimeline extends StatefulWidget {
 class _CustomTimelineState extends State<CustomTimeline> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Center(
+        child: Container(
+          height: 300,
+          width: 200,
+          child: Stack(
+            children: [
+              customCards(color: Colors.orangeAccent, heading: '', content: '',),
+
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
