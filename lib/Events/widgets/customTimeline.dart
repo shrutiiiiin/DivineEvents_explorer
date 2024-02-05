@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'custom_cards.dart';
 
 import 'custom_cards.dart';
 class CustomTimeline extends StatefulWidget {
@@ -10,7 +11,21 @@ class CustomTimeline extends StatefulWidget {
 }
 
 class _CustomTimelineState extends State<CustomTimeline> {
+  late PageController _pageController;
+  int _currentPage = 0;
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _pageController = PageController(initialPage:_currentPage, viewportFraction: 0.8 );
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    _pageController.dispose();
+  }
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
@@ -27,6 +42,7 @@ class _CustomTimelineState extends State<CustomTimeline> {
           PageView.builder(
             itemCount: EventList.length,
               physics: const ClampingScrollPhysics(),
+              controller: _pageController,
               itemBuilder: (context, index){
             return CarouselView(index);
           })],
@@ -37,9 +53,8 @@ class _CustomTimelineState extends State<CustomTimeline> {
 }
 
 Widget CarouselView(int index){
-  return Container(
-
-  );
+  return Container();
 }
+
 
 
