@@ -24,10 +24,22 @@ class _CustomTimelineState extends State<CustomTimeline> {
               ),
               ),
             ),
-
-          ],
+          PageView.builder(
+            itemCount: EventList.length,
+              physics: const ClampingScrollPhysics(),
+              itemBuilder: (context, index){
+            return CarouselView(index);
+          })],
         ),
       ),
     );
   }
 }
+
+Widget CarouselView(int index){
+  return Container(
+
+  );
+}
+
+
