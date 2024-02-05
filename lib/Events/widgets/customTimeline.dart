@@ -39,22 +39,26 @@ class _CustomTimelineState extends State<CustomTimeline> {
               ),
               ),
             ),
-          PageView.builder(
-            itemCount: EventList.length,
-              physics: const ClampingScrollPhysics(),
-              controller: _pageController,
-              itemBuilder: (context, index){
-            return CarouselView(index);
-          })],
+
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 30),
+            child: AspectRatio(
+              aspectRatio: 0.98989,
+              child: PageView.builder(
+                itemCount: EventList.length,
+                  physics: const ClampingScrollPhysics(),
+                  controller: _pageController,
+                  itemBuilder: (context, index){
+                return customCards(heading: EventList[index].heading, content: EventList[index].content);
+              }),
+            ),
+          )],
         ),
       ),
     );
   }
 }
 
-Widget CarouselView(int index){
-  return Container();
-}
 
 
 

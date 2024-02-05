@@ -8,12 +8,19 @@ class customCards extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+      child: GestureDetector(
+        onTap: (){
+          Container(
+
+          );
+        },
+        child: Container(
           decoration: BoxDecoration(
             color: Colors.orange[100],
             borderRadius: BorderRadius.circular(30),
+
             boxShadow: [
               BoxShadow(
                 offset: Offset(0, 4),
@@ -22,22 +29,31 @@ class customCards extends StatelessWidget {
               )
             ],
           ),
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Text(
-              heading,
-              style: TextStyle(
-                color: Colors.black, // Set the text color here
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
+
+          child: Column(
+          children: [
+            Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Text(
+                  heading,
+                  style: TextStyle(
+                    color: Colors.black, // Set the text color here
+                    fontSize: 20,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
               ),
-            ),
+              SizedBox(height: 3),
+               Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Text(content),
+              ),
+          ],
           ),
         ),
-        SizedBox(height: 10),
-        Text(content),
-      ],
+      ),
     );
+
   }
 }
 
